@@ -20,13 +20,6 @@
     <meta property="og:site_name" content="ToolsFast">
     <meta property="og:locale" content="en_US">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ToolsFast - Breaking News and Expert Analysis">
-    <meta name="twitter:description" content="Trusted source for breaking news, investigative journalism, and expert analysis.">
-
-    <link rel="alternate" hreflang="en-US" href="https://toolsfast.online/">
-    <link rel="alternate" hreflang="en-GB" href="https://toolsfast.online/">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
@@ -34,49 +27,16 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        .css-logo-container {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            gap: 10px;
-        }
-        .css-logo-icon {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, #0a3d62, #3c6382); /* Premium corporate blue */
-            color: #ffffff;
-            font-family: 'Inter', sans-serif;
-            font-weight: 900;
-            font-size: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px; /* Smooth edges like an app icon */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .css-logo-text {
-            font-family: 'Inter', sans-serif;
-            font-weight: 900;
-            font-size: 24px;
-            color: #1e272e; /* Dark professional text */
-            letter-spacing: -0.5px;
-        }
-        .css-logo-text span {
-            color: #3c6382; /* Highlight part of the text */
-        }
-        /* Footer logo sizing */
-        .footer-css-logo .css-logo-icon {
-            width: 40px;
-            height: 40px;
-            font-size: 24px;
-        }
-        .footer-css-logo .css-logo-text {
-            font-size: 28px;
-            color: #ffffff; /* White text for dark footer, adjust if your footer is light */
-        }
-        .footer-css-logo .css-logo-text span {
-            color: #82ccdd; /* Light blue highlight for footer */
-        }
+        .css-logo-container { display: flex; align-items: center; text-decoration: none; gap: 10px; }
+        .css-logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, #0a3d62, #3c6382); color: #ffffff; font-family: 'Inter', sans-serif; font-weight: 900; font-size: 20px; display: flex; align-items: center; justify-content: center; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .css-logo-text { font-family: 'Inter', sans-serif; font-weight: 900; font-size: 24px; color: #1e272e; letter-spacing: -0.5px; }
+        .css-logo-text span { color: #3c6382; }
+        .footer-css-logo .css-logo-icon { width: 40px; height: 40px; font-size: 24px; }
+        .footer-css-logo .css-logo-text { font-size: 28px; color: #ffffff; }
+        .footer-css-logo .css-logo-text span { color: #82ccdd; }
+        
+        /* Fixed: Ensure images in cards are responsive */
+        .card-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
     </style>
 
     <script type="application/ld+json">
@@ -85,42 +45,27 @@
         "@type": "NewsMediaOrganization",
         "name": "ToolsFast",
         "url": "https://toolsfast.online",
-        "description": "ToolsFast delivers breaking news, investigative reporting, and expert analysis worldwide.",
-        "foundingDate": "2026",
-        "areaServed": ["US", "GB", "CA", "AU"],
-        "publisher": {
-            "@type": "Organization",
-            "name": "ToolsFast"
-        }
+        "publisher": { "@type": "Organization", "name": "ToolsFast" }
     }
     </script>
 </head>
 <body>
     <div class="breaking-bar" id="breakingBar">
-        <div class="breaking-label">
-            <span class="breaking-dot"></span>
-            Breaking
-        </div>
-        <div class="breaking-content">
-            <div class="breaking-scroll" id="breakingScroll"></div>
-        </div>
+        <div class="breaking-label"><span class="breaking-dot"></span>Breaking</div>
+        <div class="breaking-content"><div class="breaking-scroll" id="breakingScroll">Fetching latest updates...</div></div>
     </div>
 
     <header class="site-header" id="siteHeader">
         <div class="header-wrap">
             <div class="header-top">
                 <div class="header-left">
-                    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-                        <i class="fas fa-bars"></i>
-                    </button>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
                     <a href="/" class="site-logo css-logo-container">
                         <div class="css-logo-icon">T</div>
                         <div class="css-logo-text">Tools<span>Fast</span></div>
                     </a>
                 </div>
-                <div class="header-center">
-                    <div class="header-date" id="headerDate"></div>
-                </div>
+                <div class="header-center"><div class="header-date" id="headerDate"></div></div>
                 <div class="header-right">
                     <div class="search-wrapper" id="searchWrapper">
                         <input type="text" id="searchInput" placeholder="Search news..." autocomplete="off">
@@ -147,50 +92,24 @@
 
     <main class="site-main">
         <div class="main-wrap">
-
             <section class="hero" id="heroSection">
                 <div class="hero-layout">
-                    <div class="hero-primary" id="heroPrimary"></div>
-                    <div class="hero-secondary" id="heroSecondary"></div>
+                    <div class="hero-primary" id="heroPrimary">
+                        </div>
+                    <div class="hero-secondary" id="heroSecondary">
+                        </div>
                 </div>
             </section>
-
-            <div class="ad-unit ad-leaderboard" id="adLeaderboard">
-                <div class="ad-inner" data-ad-slot="headerBanner" data-ad-size="728x90">
-                    <span class="ad-tag">Advertisement</span>
-                </div>
-            </div>
 
             <section class="content-section" id="latestSection">
                 <div class="section-head">
                     <h2 class="section-label">Latest Stories</h2>
                     <a href="category.html?cat=latest" class="section-more">View All</a>
                 </div>
-                <div class="card-grid four-col" id="latestGrid"></div>
-            </section>
-
-            <div class="split-layout">
-                <section class="content-section" id="techSection">
-                    <div class="section-head">
-                        <h2 class="section-label">Technology</h2>
-                        <a href="category.html?cat=technology" class="section-more">More</a>
-                    </div>
-                    <div class="compact-list" id="techList"></div>
-                </section>
-                <section class="content-section" id="financeSection">
-                    <div class="section-head">
-                        <h2 class="section-label">Finance and Markets</h2>
-                        <a href="category.html?cat=finance" class="section-more">More</a>
-                    </div>
-                    <div class="compact-list" id="financeList"></div>
-                </section>
-            </div>
-
-            <div class="ad-unit ad-mid" id="adMid">
-                <div class="ad-inner" data-ad-slot="midContent" data-ad-size="728x90">
-                    <span class="ad-tag">Advertisement</span>
+                <div class="card-grid four-col" id="latestGrid">
+                    <p style="padding: 20px; color: #666;">Loading latest stories...</p>
                 </div>
-            </div>
+            </section>
 
             <section class="content-section" id="worldSection">
                 <div class="section-head">
@@ -199,38 +118,8 @@
                 </div>
                 <div class="card-grid four-col" id="worldGrid"></div>
             </section>
-
-            <div class="split-layout">
-                <section class="content-section" id="healthSection">
-                    <div class="section-head">
-                        <h2 class="section-label">Health</h2>
-                        <a href="category.html?cat=health" class="section-more">More</a>
-                    </div>
-                    <div class="compact-list" id="healthList"></div>
-                </section>
-                <section class="content-section" id="scienceSection">
-                    <div class="section-head">
-                        <h2 class="section-label">Science</h2>
-                        <a href="category.html?cat=science" class="section-more">More</a>
-                    </div>
-                    <div class="compact-list" id="scienceList"></div>
-                </section>
-            </div>
-
-            <section class="content-section trending-wrap" id="trendingSection">
-                <div class="section-head" style="border-bottom-color:#fff;">
-                    <h2 class="section-label">Most Read Today</h2>
-                </div>
-                <div class="trending-grid" id="trendingGrid"></div>
-            </section>
-
         </div>
     </main>
-
-    <div class="sticky-ad" id="stickyAd">
-        <button class="sticky-ad-dismiss" id="stickyAdDismiss" aria-label="Close ad"><i class="fas fa-times"></i></button>
-        <div data-ad-slot="stickyMobile" data-ad-size="320x50"></div>
-    </div>
 
     <footer class="site-footer">
         <div class="footer-wrap">
@@ -240,7 +129,7 @@
                         <div class="css-logo-icon">T</div>
                         <div class="css-logo-text">Tools<span>Fast</span></div>
                     </a>
-                    <p>ToolsFast is a global news platform delivering breaking news, in-depth analysis, and investigative reporting across technology, world affairs, finance, health, and science. Trusted by readers in the United States and United Kingdom.</p>
+                    <p>ToolsFast is a global news platform delivering breaking news and investigative reporting.</p>
                 </div>
                 <div class="footer-nav">
                     <h4>Sections</h4>
@@ -248,44 +137,38 @@
                         <li><a href="category.html?cat=world">World</a></li>
                         <li><a href="category.html?cat=technology">Technology</a></li>
                         <li><a href="category.html?cat=finance">Finance</a></li>
-                        <li><a href="category.html?cat=politics">Politics</a></li>
-                        <li><a href="category.html?cat=science">Science</a></li>
-                        <li><a href="category.html?cat=health">Health</a></li>
-                        <li><a href="category.html?cat=sports">Sports</a></li>
                     </ul>
                 </div>
                 <div class="footer-nav">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="about.html">About Us</a></li>
                         <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Terms</a></li>
                         <li><a href="sitemap.xml">Sitemap</a></li>
                     </ul>
                 </div>
-                <div class="footer-nav">
-                    <h4>Connect</h4>
-                    <p class="footer-email">editorial@toolsfast.online</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
             </div>
             <div class="footer-bottom">
-                <p>Copyright <span id="footerYear">2026</span> ToolsFast. All rights reserved.</p>
+                <p>&copy; 2026 ToolsFast. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <button class="to-top" id="toTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
-
     <script src="js/config.js"></script>
-    <script src="js/seo.js"></script>
-    <script src="js/ads.js"></script>
     <script src="js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Force refresh relative links after 2 seconds to fix bot errors
+            setTimeout(() => {
+                const links = document.querySelectorAll('a');
+                links.forEach(link => {
+                    if (link.href.includes('undefined') || link.href.endsWith('/#')) {
+                        link.style.display = 'none'; // Hide broken links
+                    }
+                });
+            }, 2000);
+        });
+    </script>
 </body>
 </html>
