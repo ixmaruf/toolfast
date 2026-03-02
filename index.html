@@ -18,7 +18,6 @@
     <meta property="og:description" content="Trusted source for breaking news, investigative journalism, and expert analysis on technology, politics, finance, and more.">
     <meta property="og:url" content="https://toolsfast.online/">
     <meta property="og:site_name" content="ToolsFast">
-    <meta property="og:image" content="https://toolsfast.online/images/logo.png">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -28,12 +27,57 @@
     <link rel="alternate" hreflang="en-US" href="https://toolsfast.online/">
     <link rel="alternate" hreflang="en-GB" href="https://toolsfast.online/">
 
-    <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .css-logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+        .css-logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #0a3d62, #3c6382); /* Premium corporate blue */
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px; /* Smooth edges like an app icon */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .css-logo-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            font-size: 24px;
+            color: #1e272e; /* Dark professional text */
+            letter-spacing: -0.5px;
+        }
+        .css-logo-text span {
+            color: #3c6382; /* Highlight part of the text */
+        }
+        /* Footer logo sizing */
+        .footer-css-logo .css-logo-icon {
+            width: 40px;
+            height: 40px;
+            font-size: 24px;
+        }
+        .footer-css-logo .css-logo-text {
+            font-size: 28px;
+            color: #ffffff; /* White text for dark footer, adjust if your footer is light */
+        }
+        .footer-css-logo .css-logo-text span {
+            color: #82ccdd; /* Light blue highlight for footer */
+        }
+    </style>
 
     <script type="application/ld+json">
     {
@@ -41,23 +85,17 @@
         "@type": "NewsMediaOrganization",
         "name": "ToolsFast",
         "url": "https://toolsfast.online",
-        "logo": "https://toolsfast.online/images/logo.png",
         "description": "ToolsFast delivers breaking news, investigative reporting, and expert analysis worldwide.",
         "foundingDate": "2026",
         "areaServed": ["US", "GB", "CA", "AU"],
         "publisher": {
             "@type": "Organization",
-            "name": "ToolsFast",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://toolsfast.online/images/logo.png"
-            }
+            "name": "ToolsFast"
         }
     }
     </script>
 </head>
 <body>
-    <!-- Breaking News Ticker -->
     <div class="breaking-bar" id="breakingBar">
         <div class="breaking-label">
             <span class="breaking-dot"></span>
@@ -68,7 +106,6 @@
         </div>
     </div>
 
-    <!-- Header -->
     <header class="site-header" id="siteHeader">
         <div class="header-wrap">
             <div class="header-top">
@@ -76,9 +113,9 @@
                     <button class="menu-toggle" id="menuToggle" aria-label="Menu">
                         <i class="fas fa-bars"></i>
                     </button>
-                    <a href="/" class="site-logo">
-                        <img src="images/logo.png" alt="ToolsFast" class="logo-icon">
-                        <span class="logo-name">ToolsFast</span>
+                    <a href="/" class="site-logo css-logo-container">
+                        <div class="css-logo-icon">T</div>
+                        <div class="css-logo-text">Tools<span>Fast</span></div>
                     </a>
                 </div>
                 <div class="header-center">
@@ -108,11 +145,9 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="site-main">
         <div class="main-wrap">
 
-            <!-- Hero Section -->
             <section class="hero" id="heroSection">
                 <div class="hero-layout">
                     <div class="hero-primary" id="heroPrimary"></div>
@@ -120,14 +155,12 @@
                 </div>
             </section>
 
-            <!-- Ad: Header Leaderboard -->
             <div class="ad-unit ad-leaderboard" id="adLeaderboard">
                 <div class="ad-inner" data-ad-slot="headerBanner" data-ad-size="728x90">
                     <span class="ad-tag">Advertisement</span>
                 </div>
             </div>
 
-            <!-- Latest Stories -->
             <section class="content-section" id="latestSection">
                 <div class="section-head">
                     <h2 class="section-label">Latest Stories</h2>
@@ -136,7 +169,6 @@
                 <div class="card-grid four-col" id="latestGrid"></div>
             </section>
 
-            <!-- Technology and Finance -->
             <div class="split-layout">
                 <section class="content-section" id="techSection">
                     <div class="section-head">
@@ -154,14 +186,12 @@
                 </section>
             </div>
 
-            <!-- Ad: Mid Content -->
             <div class="ad-unit ad-mid" id="adMid">
                 <div class="ad-inner" data-ad-slot="midContent" data-ad-size="728x90">
                     <span class="ad-tag">Advertisement</span>
                 </div>
             </div>
 
-            <!-- World Affairs -->
             <section class="content-section" id="worldSection">
                 <div class="section-head">
                     <h2 class="section-label">World Affairs</h2>
@@ -170,7 +200,6 @@
                 <div class="card-grid four-col" id="worldGrid"></div>
             </section>
 
-            <!-- Health and Science -->
             <div class="split-layout">
                 <section class="content-section" id="healthSection">
                     <div class="section-head">
@@ -188,7 +217,6 @@
                 </section>
             </div>
 
-            <!-- Most Read Today -->
             <section class="content-section trending-wrap" id="trendingSection">
                 <div class="section-head" style="border-bottom-color:#fff;">
                     <h2 class="section-label">Most Read Today</h2>
@@ -199,18 +227,19 @@
         </div>
     </main>
 
-    <!-- Sticky Mobile Ad -->
     <div class="sticky-ad" id="stickyAd">
         <button class="sticky-ad-dismiss" id="stickyAdDismiss" aria-label="Close ad"><i class="fas fa-times"></i></button>
         <div data-ad-slot="stickyMobile" data-ad-size="320x50"></div>
     </div>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-wrap">
             <div class="footer-cols">
                 <div class="footer-about">
-                    <img src="images/logo.png" alt="ToolsFast" class="footer-logo">
+                    <a href="/" class="css-logo-container footer-css-logo" style="margin-bottom: 20px; display: inline-flex;">
+                        <div class="css-logo-icon">T</div>
+                        <div class="css-logo-text">Tools<span>Fast</span></div>
+                    </a>
                     <p>ToolsFast is a global news platform delivering breaking news, in-depth analysis, and investigative reporting across technology, world affairs, finance, health, and science. Trusted by readers in the United States and United Kingdom.</p>
                 </div>
                 <div class="footer-nav">
@@ -252,7 +281,6 @@
         </div>
     </footer>
 
-    <!-- Back to Top -->
     <button class="to-top" id="toTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
 
     <script src="js/config.js"></script>
