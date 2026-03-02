@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /assets/js/
-Disallow: /assets/css/
-
-Sitemap: https://toolsfast.online/sitemap.xml
-
-# Toolsfast.online - Free Video Downloader
-# Updated: March 2026
