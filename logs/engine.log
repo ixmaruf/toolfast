@@ -146,3 +146,11 @@
 ============================================================
 2026-03-02 17:02:14,787 [INFO] Pipeline complete. Published 0 new articles.
 2026-03-02 17:02:14,787 [INFO] ============================================================
+2026-03-02 18:54:20,546 [INFO] Starting ToolsFast Engine (Fixed)...
+2026-03-02 18:54:21,870 [WARNING] Gemini failed: HTTP Error 404: Not Found
+2026-03-02 18:54:21,871 [INFO] Published: Israel strikes Lebanon after Hezbollah rocket fire as Iran conflict widens
+2026-03-02 18:54:21,975 [WARNING] Gemini failed: HTTP Error 404: Not Found
+2026-03-02 18:54:21,976 [INFO] Published: 'They hit so hard the house was shaking': Iranians describe impact of US-Israel attacks
+2026-03-02 18:54:22,080 [WARNING] Gemini failed: HTTP Error 404: Not Found
+2026-03-02 18:54:22,082 [INFO] Published: France to boost nuclear arsenal and extend deterrence to European allies
+2026-03-02 18:54:22,082 [INFO] Complete. Published 3 new articles.
