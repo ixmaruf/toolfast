@@ -1,0 +1,74 @@
+2026-03-02 16:58:31,277 [INFO] ============================================================
+2026-03-02 16:58:31,277 [INFO] ToolsFast News Engine v2.0 - Starting pipeline
+2026-03-02 16:58:31,277 [INFO] ============================================================
+2026-03-02 16:58:31,277 [INFO] Existing articles in database: 0
+2026-03-02 16:58:31,278 [INFO] Step 1: Gathering topics from multiple sources...
+2026-03-02 16:58:32,040 [INFO] Google Trends: found 20 trending topics
+2026-03-02 16:58:32,154 [INFO] NewsAPI (general): found 9 articles
+2026-03-02 16:58:32,279 [INFO] NewsAPI (technology): found 10 articles
+2026-03-02 16:58:32,393 [INFO] NewsAPI (business): found 9 articles
+2026-03-02 16:58:32,513 [INFO] NewsAPI (science): found 10 articles
+2026-03-02 16:58:32,625 [INFO] NewsAPI (health): found 10 articles
+2026-03-02 16:58:32,753 [INFO] NewsAPI (sports): found 10 articles
+2026-03-02 16:58:33,026 [INFO] GNews (general): found 10 articles
+2026-03-02 16:58:33,153 [INFO] GNews (technology): found 10 articles
+2026-03-02 16:58:33,283 [INFO] GNews (business): found 10 articles
+2026-03-02 16:58:33,405 [WARNING] fetch_json failed for https://gnews.io/api/v4/top-headlines?category=science&q=&lang=en&country=us&max=10&apikey=5dc09bf5cc47d9412ec13679fa70c86f: HTTP Error 429: Too Many Requests
+2026-03-02 16:58:33,510 [WARNING] fetch_json failed for https://gnews.io/api/v4/top-headlines?category=health&q=&lang=en&country=us&max=10&apikey=5dc09bf5cc47d9412ec13679fa70c86f: HTTP Error 429: Too Many Requests
+2026-03-02 16:58:33,626 [WARNING] fetch_json failed for https://gnews.io/api/v4/top-headlines?category=sports&q=&lang=en&country=us&max=10&apikey=5dc09bf5cc47d9412ec13679fa70c86f: HTTP Error 429: Too Many Requests
+2026-03-02 16:58:33,628 [INFO] Total unique topics gathered: 82
+2026-03-02 16:58:33,628 [INFO] Selected 3 topics for article generation
+2026-03-02 16:58:33,628 [INFO] 
+--- Article 1/3 ---
+2026-03-02 16:58:33,734 [WARNING] Gemini attempt 1 failed: HTTP Error 404: Not Found
+2026-03-02 16:58:36,819 [WARNING] Gemini attempt 2 failed: HTTP Error 404: Not Found
+2026-03-02 16:58:39,820 [INFO] Headline: mansoureh khojaste bagherzadeh
+2026-03-02 16:58:39,820 [INFO] Slug: mansoureh-khojaste-bagherzadeh-802dbd357228
+2026-03-02 16:58:39,820 [INFO] Category: world
+2026-03-02 16:58:39,820 [INFO] Generating article content...
+2026-03-02 16:58:39,904 [WARNING] Gemini attempt 1 failed: HTTP Error 404: Not Found
+2026-03-02 16:58:42,995 [WARNING] Gemini attempt 2 failed: HTTP Error 404: Not Found
+2026-03-02 16:58:45,996 [INFO] Gemini insufficient, trying Groq Key 1
+2026-03-02 16:58:45,996 [WARNING] GROQ_KEY_1 not set
+2026-03-02 16:58:45,996 [INFO] Groq Key 1 insufficient, trying Groq Key 2
+2026-03-02 16:58:45,996 [WARNING] GROQ_KEY_2 not set
+2026-03-02 16:58:45,996 [ERROR] All AI providers failed or returned insufficient content
+2026-03-02 16:58:45,996 [ERROR] Content generation failed, skipping this topic
+2026-03-02 16:58:45,997 [INFO] 
+--- Article 2/3 ---
+2026-03-02 16:58:46,088 [WARNING] Gemini attempt 1 failed: HTTP Error 404: Not Found
+2026-03-02 16:58:49,175 [WARNING] Gemini attempt 2 failed: HTTP Error 404: Not Found
+2026-03-02 16:58:52,177 [INFO] Headline: Where to see the total lunar eclipse in the early hours of March 3 - Space
+2026-03-02 16:58:52,177 [INFO] Slug: where-to-see-the-total-lunar-eclipse-in-the-early-hours-of-march-3-space-5eeb9808a3d6
+2026-03-02 16:58:52,177 [INFO] Category: science
+2026-03-02 16:58:52,177 [INFO] Generating article content...
+2026-03-02 16:58:52,253 [WARNING] Gemini attempt 1 failed: HTTP Error 404: Not Found
+2026-03-02 16:58:55,335 [WARNING] Gemini attempt 2 failed: HTTP Error 404: Not Found
+2026-03-02 16:58:58,336 [INFO] Gemini insufficient, trying Groq Key 1
+2026-03-02 16:58:58,337 [WARNING] GROQ_KEY_1 not set
+2026-03-02 16:58:58,337 [INFO] Groq Key 1 insufficient, trying Groq Key 2
+2026-03-02 16:58:58,337 [WARNING] GROQ_KEY_2 not set
+2026-03-02 16:58:58,337 [ERROR] All AI providers failed or returned insufficient content
+2026-03-02 16:58:58,337 [ERROR] Content generation failed, skipping this topic
+2026-03-02 16:58:58,337 [INFO] 
+--- Article 3/3 ---
+2026-03-02 16:58:58,420 [WARNING] Gemini attempt 1 failed: HTTP Error 404: Not Found
+2026-03-02 16:59:01,506 [WARNING] Gemini attempt 2 failed: HTTP Error 404: Not Found
+2026-03-02 16:59:04,508 [INFO] Headline: Measles outbreaks are costing the U.S. millions of dollars. The true losses can't be counted. - NBC News
+2026-03-02 16:59:04,508 [INFO] Slug: measles-outbreaks-are-costing-the-u-s-millions-of-dollars-the-true-losses-can-t--6922c4b5fabf
+2026-03-02 16:59:04,508 [INFO] Category: finance
+2026-03-02 16:59:04,508 [INFO] Generating article content...
+2026-03-02 16:59:04,589 [WARNING] Gemini attempt 1 failed: HTTP Error 404: Not Found
+2026-03-02 16:59:07,671 [WARNING] Gemini attempt 2 failed: HTTP Error 404: Not Found
+2026-03-02 16:59:10,672 [INFO] Gemini insufficient, trying Groq Key 1
+2026-03-02 16:59:10,672 [WARNING] GROQ_KEY_1 not set
+2026-03-02 16:59:10,672 [INFO] Groq Key 1 insufficient, trying Groq Key 2
+2026-03-02 16:59:10,672 [WARNING] GROQ_KEY_2 not set
+2026-03-02 16:59:10,672 [ERROR] All AI providers failed or returned insufficient content
+2026-03-02 16:59:10,672 [ERROR] Content generation failed, skipping this topic
+2026-03-02 16:59:10,673 [INFO] Database updated: 0 total articles
+2026-03-02 16:59:10,673 [INFO] Sitemap updated with 13 URLs
+2026-03-02 16:59:10,673 [INFO] 
+============================================================
+2026-03-02 16:59:10,673 [INFO] Pipeline complete. Published 0 new articles.
+2026-03-02 16:59:10,673 [INFO] ============================================================
