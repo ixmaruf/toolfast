@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>{{ARTICLE_TITLE}} - ToolsFast</title>
+    <meta name="description" content="{{ARTICLE_EXCERPT}}">
+    <meta name="keywords" content="{{ARTICLE_KEYWORDS_META}}">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="{{ARTICLE_AUTHOR}}">
+    <link rel="canonical" href="{{ARTICLE_URL}}">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ARTICLE_TITLE}}">
+    <meta property="og:description" content="{{ARTICLE_EXCERPT}}">
+    <meta property="og:url" content="{{ARTICLE_URL}}">
+    <meta property="og:site_name" content="ToolsFast">
+    <meta property="og:image" content="{{ARTICLE_IMAGE}}">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:published_time" content="{{ARTICLE_DATE}}">
+    <meta property="article:section" content="{{ARTICLE_CATEGORY_LABEL}}">
+    <meta property="article:author" content="{{ARTICLE_AUTHOR}}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ARTICLE_TITLE}}">
+    <meta name="twitter:description" content="{{ARTICLE_EXCERPT}}">
+    <meta name="twitter:image" content="{{ARTICLE_IMAGE}}">
+
+    <link rel="alternate" hreflang="en-US" href="{{ARTICLE_URL}}">
+    <link rel="alternate" hreflang="en-GB" href="{{ARTICLE_URL}}">
+
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "{{ARTICLE_TITLE}}",
+        "description": "{{ARTICLE_EXCERPT}}",
+        "image": ["{{ARTICLE_IMAGE}}"],
+        "datePublished": "{{ARTICLE_DATE}}",
+        "dateModified": "{{ARTICLE_DATE}}",
+        "author": [{
+            "@type": "Person",
+            "name": "{{ARTICLE_AUTHOR}}",
+            "url": "{{SITE_URL}}/about.html"
+        }],
+        "publisher": {
+            "@type": "Organization",
+            "name": "ToolsFast",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{SITE_URL}}/images/logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ARTICLE_URL}}"
+        },
+        "articleSection": "{{ARTICLE_CATEGORY_LABEL}}",
+        "wordCount": {{ARTICLE_WORD_COUNT}},
+        "inLanguage": "en-US",
+        "isAccessibleForFree": true
+    }
+    </script>
+</head>
+<body class="article-page">
+
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-wrap">
+            <div class="header-top">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="../index.html" class="site-logo">
+                        <img src="../images/logo.png" alt="ToolsFast" class="logo-icon">
+                        <span class="logo-name">ToolsFast</span>
+                    </a>
+                </div>
+                <div class="header-center">
+                    <div class="header-date" id="headerDate"></div>
+                </div>
+                <div class="header-right">
+                    <div class="search-wrapper">
+                        <input type="text" id="searchInput" placeholder="Search news..." autocomplete="off">
+                        <button id="searchBtn" aria-label="Search"><i class="fas fa-search"></i></button>
+                    </div>
+                    <span class="live-badge"><span class="live-pulse"></span>Live</span>
+                </div>
+            </div>
+            <nav class="site-nav" id="siteNav">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../category.html?cat=world">World</a></li>
+                    <li><a href="../category.html?cat=technology">Technology</a></li>
+                    <li><a href="../category.html?cat=finance">Finance</a></li>
+                    <li><a href="../category.html?cat=politics">Politics</a></li>
+                    <li><a href="../category.html?cat=science">Science</a></li>
+                    <li><a href="../category.html?cat=health">Health</a></li>
+                    <li><a href="../category.html?cat=sports">Sports</a></li>
+                    <li><a href="../category.html?cat=ai">AI</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Article -->
+    <main class="site-main">
+        <div class="article-wrap">
+
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <span class="sep">/</span>
+                <a href="../category.html?cat={{ARTICLE_CATEGORY}}">{{ARTICLE_CATEGORY_LABEL}}</a>
+                <span class="sep">/</span>
+                <span>Article</span>
+            </nav>
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <span class="cat-label" style="--cat-color:var(--accent);">{{ARTICLE_CATEGORY_LABEL}}</span>
+                <h1 class="article-title">{{ARTICLE_TITLE}}</h1>
+                <div class="article-meta-bar">
+                    <span class="meta-item"><i class="far fa-user"></i> {{ARTICLE_AUTHOR}}</span>
+                    <span class="meta-item"><i class="far fa-calendar"></i> {{ARTICLE_DATE_FORMATTED}}</span>
+                    <span class="meta-item"><i class="fas fa-book-reader"></i> {{ARTICLE_READ_TIME}} min read</span>
+                    <span class="meta-item"><i class="fas fa-text-width"></i> {{ARTICLE_WORD_COUNT}} words</span>
+                </div>
+            </header>
+
+            <!-- Ad: Header Banner -->
+            <div class="ad-unit">
+                <div data-ad-slot="headerBanner" data-ad-size="728x90">
+                    <span class="ad-tag">Advertisement</span>
+                    <div style="width:100%;max-width:728px;min-height:90px;display:flex;align-items:center;justify-content:center;background:#f5f5f5;border:1px dashed #ddd;border-radius:6px;margin:0 auto;color:#aaa;font-size:0.75rem;">
+                        <div style="text-align:center;padding:12px;">
+                            <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">Advertisement</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Image -->
+            <figure class="article-featured">
+                <img src="{{ARTICLE_IMAGE}}" alt="{{ARTICLE_TITLE}}" loading="eager">
+                <figcaption>Image credit: ToolsFast Media</figcaption>
+            </figure>
+
+            <!-- Article Content -->
+            <div class="article-content">
+                {{ARTICLE_CONTENT}}
+            </div>
+
+            <!-- Tags -->
+            <div class="article-tags">
+                <span class="tag-label">Tags:</span>
+                {{ARTICLE_TAGS_HTML}}
+            </div>
+
+            <!-- Share -->
+            <div class="article-share">
+                <span class="share-label">Share this article:</span>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ARTICLE_URL}}" class="share-btn" target="_blank" rel="noopener" style="background:#1877F2;"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/intent/tweet?text={{ARTICLE_TITLE}}&url={{ARTICLE_URL}}" class="share-btn" target="_blank" rel="noopener" style="background:#1DA1F2;"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ARTICLE_URL}}" class="share-btn" target="_blank" rel="noopener" style="background:#0A66C2;"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.reddit.com/submit?url={{ARTICLE_URL}}&title={{ARTICLE_TITLE}}" class="share-btn" target="_blank" rel="noopener" style="background:#FF4500;"><i class="fab fa-reddit-alien"></i></a>
+            </div>
+
+            <!-- Ad: Bottom Banner -->
+            <div class="ad-unit" style="margin-top:32px;">
+                <div data-ad-slot="articleBottom" data-ad-size="728x90">
+                    <span class="ad-tag">Advertisement</span>
+                    <div style="width:100%;max-width:728px;min-height:90px;display:flex;align-items:center;justify-content:center;background:#f5f5f5;border:1px dashed #ddd;border-radius:6px;margin:0 auto;color:#aaa;font-size:0.75rem;">
+                        <div style="text-align:center;padding:12px;">
+                            <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">Advertisement</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LSI Keywords (hidden for SEO) -->
+            {{ARTICLE_LSI_KEYWORDS}}
+
+        </div>
+    </main>
+
+    <!-- Sticky Mobile Ad -->
+    <div class="sticky-ad" id="stickyAd" style="display:none;">
+        <button class="sticky-ad-dismiss" id="stickyAdDismiss" aria-label="Close"><i class="fas fa-times"></i></button>
+        <div data-ad-slot="stickyMobile" data-ad-size="320x50">
+            <div style="width:320px;height:50px;background:#f5f5f5;border:1px dashed #ddd;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:0.65rem;margin:0 auto;">Advertisement</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-wrap">
+            <div class="footer-cols">
+                <div class="footer-about">
+                    <img src="../images/logo.png" alt="ToolsFast" class="footer-logo">
+                    <p>ToolsFast is a global news platform delivering breaking news, in-depth analysis, and investigative reporting. Trusted by readers in the United States and United Kingdom.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Sections</h4>
+                    <ul>
+                        <li><a href="../category.html?cat=world">World</a></li>
+                        <li><a href="../category.html?cat=technology">Technology</a></li>
+                        <li><a href="../category.html?cat=finance">Finance</a></li>
+                        <li><a href="../category.html?cat=politics">Politics</a></li>
+                        <li><a href="../category.html?cat=science">Science</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms of Service</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Connect</h4>
+                    <p class="footer-email">editorial@toolsfast.online</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright {{CURRENT_YEAR}} ToolsFast. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="to-top" id="toTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script>
+    // Minimal inline JS for generated articles (no external JS dependencies)
+    document.addEventListener('DOMContentLoaded', function() {
+        // Date
+        var d = new Date();
+        var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+        var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+        var el = document.getElementById('headerDate');
+        if (el) el.textContent = days[d.getDay()] + ', ' + months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+
+        // Mobile menu
+        var toggle = document.getElementById('menuToggle');
+        var nav = document.getElementById('siteNav');
+        if (toggle && nav) {
+            toggle.addEventListener('click', function() {
+                nav.classList.toggle('open');
+                toggle.querySelector('i').className = nav.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
+            });
+        }
+
+        // Sticky header
+        var header = document.getElementById('siteHeader');
+        if (header) {
+            window.addEventListener('scroll', function() {
+                header.classList.toggle('scrolled', window.scrollY > 100);
+            }, {passive: true});
+        }
+
+        // Back to top
+        var toTop = document.getElementById('toTop');
+        if (toTop) {
+            window.addEventListener('scroll', function() {
+                toTop.classList.toggle('visible', window.scrollY > 600);
+            }, {passive: true});
+            toTop.addEventListener('click', function() {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+        }
+
+        // Search
+        var searchInput = document.getElementById('searchInput');
+        var searchBtn = document.getElementById('searchBtn');
+        if (searchInput && searchBtn) {
+            function doSearch() {
+                var q = searchInput.value.trim();
+                if (q) window.location.href = '../search.html?q=' + encodeURIComponent(q);
+            }
+            searchBtn.addEventListener('click', doSearch);
+            searchInput.addEventListener('keypress', function(e) { if (e.key === 'Enter') doSearch(); });
+        }
+
+        // Sticky mobile ad
+        if (window.innerWidth <= 768) {
+            var stickyAd = document.getElementById('stickyAd');
+            var dismiss = document.getElementById('stickyAdDismiss');
+            if (stickyAd) {
+                setTimeout(function() { stickyAd.style.display = 'block'; }, 5000);
+            }
+            if (dismiss) {
+                dismiss.addEventListener('click', function() { stickyAd.style.display = 'none'; });
+            }
+        }
+    });
+    </script>
+</body>
+</html>

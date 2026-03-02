@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>ToolsFast - Breaking News, In-Depth Analysis and Expert Reporting</title>
+    <meta name="description" content="ToolsFast delivers breaking news, investigative reporting, and expert analysis across technology, world affairs, finance, politics, health, science, and sports. Trusted by readers in the United States and United Kingdom.">
+    <meta name="keywords" content="breaking news, world news, technology, finance, politics, health, science, sports, AI, expert analysis, investigative reporting">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="ToolsFast Editorial">
+    <meta name="geo.region" content="US">
+    <meta name="geo.placename" content="United States">
+    <meta name="language" content="English">
+    <link rel="canonical" href="https://toolsfast.online/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ToolsFast - Breaking News, In-Depth Analysis and Expert Reporting">
+    <meta property="og:description" content="Trusted source for breaking news, investigative journalism, and expert analysis on technology, politics, finance, and more.">
+    <meta property="og:url" content="https://toolsfast.online/">
+    <meta property="og:site_name" content="ToolsFast">
+    <meta property="og:image" content="https://toolsfast.online/images/logo.png">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ToolsFast - Breaking News and Expert Analysis">
+    <meta name="twitter:description" content="Trusted source for breaking news, investigative journalism, and expert analysis.">
+
+    <link rel="alternate" hreflang="en-US" href="https://toolsfast.online/">
+    <link rel="alternate" hreflang="en-GB" href="https://toolsfast.online/">
+
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsMediaOrganization",
+        "name": "ToolsFast",
+        "url": "https://toolsfast.online",
+        "logo": "https://toolsfast.online/images/logo.png",
+        "description": "ToolsFast delivers breaking news, investigative reporting, and expert analysis worldwide.",
+        "foundingDate": "2026",
+        "areaServed": ["US", "GB", "CA", "AU"],
+        "publisher": {
+            "@type": "Organization",
+            "name": "ToolsFast",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://toolsfast.online/images/logo.png"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Breaking News Ticker -->
+    <div class="breaking-bar" id="breakingBar">
+        <div class="breaking-label">
+            <span class="breaking-dot"></span>
+            Breaking
+        </div>
+        <div class="breaking-content">
+            <div class="breaking-scroll" id="breakingScroll"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-wrap">
+            <div class="header-top">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="/" class="site-logo">
+                        <img src="images/logo.png" alt="ToolsFast" class="logo-icon">
+                        <span class="logo-name">ToolsFast</span>
+                    </a>
+                </div>
+                <div class="header-center">
+                    <div class="header-date" id="headerDate"></div>
+                </div>
+                <div class="header-right">
+                    <div class="search-wrapper" id="searchWrapper">
+                        <input type="text" id="searchInput" placeholder="Search news..." autocomplete="off">
+                        <button id="searchBtn" aria-label="Search"><i class="fas fa-search"></i></button>
+                    </div>
+                    <span class="live-badge"><span class="live-pulse"></span>Live</span>
+                </div>
+            </div>
+            <nav class="site-nav" id="siteNav">
+                <ul class="nav-links">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="category.html?cat=world">World</a></li>
+                    <li><a href="category.html?cat=technology">Technology</a></li>
+                    <li><a href="category.html?cat=finance">Finance</a></li>
+                    <li><a href="category.html?cat=politics">Politics</a></li>
+                    <li><a href="category.html?cat=science">Science</a></li>
+                    <li><a href="category.html?cat=health">Health</a></li>
+                    <li><a href="category.html?cat=sports">Sports</a></li>
+                    <li><a href="category.html?cat=ai">AI</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="site-main">
+        <div class="main-wrap">
+
+            <!-- Hero Section -->
+            <section class="hero" id="heroSection">
+                <div class="hero-layout">
+                    <div class="hero-primary" id="heroPrimary"></div>
+                    <div class="hero-secondary" id="heroSecondary"></div>
+                </div>
+            </section>
+
+            <!-- Ad: Header Leaderboard -->
+            <div class="ad-unit ad-leaderboard" id="adLeaderboard">
+                <div class="ad-inner" data-ad-slot="headerBanner" data-ad-size="728x90">
+                    <span class="ad-tag">Advertisement</span>
+                </div>
+            </div>
+
+            <!-- Latest Stories -->
+            <section class="content-section" id="latestSection">
+                <div class="section-head">
+                    <h2 class="section-label">Latest Stories</h2>
+                    <a href="category.html?cat=latest" class="section-more">View All</a>
+                </div>
+                <div class="card-grid four-col" id="latestGrid"></div>
+            </section>
+
+            <!-- Technology and Finance -->
+            <div class="split-layout">
+                <section class="content-section" id="techSection">
+                    <div class="section-head">
+                        <h2 class="section-label">Technology</h2>
+                        <a href="category.html?cat=technology" class="section-more">More</a>
+                    </div>
+                    <div class="compact-list" id="techList"></div>
+                </section>
+                <section class="content-section" id="financeSection">
+                    <div class="section-head">
+                        <h2 class="section-label">Finance and Markets</h2>
+                        <a href="category.html?cat=finance" class="section-more">More</a>
+                    </div>
+                    <div class="compact-list" id="financeList"></div>
+                </section>
+            </div>
+
+            <!-- Ad: Mid Content -->
+            <div class="ad-unit ad-mid" id="adMid">
+                <div class="ad-inner" data-ad-slot="midContent" data-ad-size="728x90">
+                    <span class="ad-tag">Advertisement</span>
+                </div>
+            </div>
+
+            <!-- World Affairs -->
+            <section class="content-section" id="worldSection">
+                <div class="section-head">
+                    <h2 class="section-label">World Affairs</h2>
+                    <a href="category.html?cat=world" class="section-more">More</a>
+                </div>
+                <div class="card-grid four-col" id="worldGrid"></div>
+            </section>
+
+            <!-- Health and Science -->
+            <div class="split-layout">
+                <section class="content-section" id="healthSection">
+                    <div class="section-head">
+                        <h2 class="section-label">Health</h2>
+                        <a href="category.html?cat=health" class="section-more">More</a>
+                    </div>
+                    <div class="compact-list" id="healthList"></div>
+                </section>
+                <section class="content-section" id="scienceSection">
+                    <div class="section-head">
+                        <h2 class="section-label">Science</h2>
+                        <a href="category.html?cat=science" class="section-more">More</a>
+                    </div>
+                    <div class="compact-list" id="scienceList"></div>
+                </section>
+            </div>
+
+            <!-- Most Read Today -->
+            <section class="content-section trending-wrap" id="trendingSection">
+                <div class="section-head" style="border-bottom-color:#fff;">
+                    <h2 class="section-label">Most Read Today</h2>
+                </div>
+                <div class="trending-grid" id="trendingGrid"></div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Sticky Mobile Ad -->
+    <div class="sticky-ad" id="stickyAd">
+        <button class="sticky-ad-dismiss" id="stickyAdDismiss" aria-label="Close ad"><i class="fas fa-times"></i></button>
+        <div data-ad-slot="stickyMobile" data-ad-size="320x50"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-wrap">
+            <div class="footer-cols">
+                <div class="footer-about">
+                    <img src="images/logo.png" alt="ToolsFast" class="footer-logo">
+                    <p>ToolsFast is a global news platform delivering breaking news, in-depth analysis, and investigative reporting across technology, world affairs, finance, health, and science. Trusted by readers in the United States and United Kingdom.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Sections</h4>
+                    <ul>
+                        <li><a href="category.html?cat=world">World</a></li>
+                        <li><a href="category.html?cat=technology">Technology</a></li>
+                        <li><a href="category.html?cat=finance">Finance</a></li>
+                        <li><a href="category.html?cat=politics">Politics</a></li>
+                        <li><a href="category.html?cat=science">Science</a></li>
+                        <li><a href="category.html?cat=health">Health</a></li>
+                        <li><a href="category.html?cat=sports">Sports</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="sitemap.xml">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Connect</h4>
+                    <p class="footer-email">editorial@toolsfast.online</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright <span id="footerYear">2026</span> ToolsFast. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="to-top" id="toTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="js/config.js"></script>
+    <script src="js/seo.js"></script>
+    <script src="js/ads.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
