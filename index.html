@@ -4,170 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>ToolsFast - Breaking News, In-Depth Analysis and Expert Reporting</title>
-    <meta name="description" content="ToolsFast delivers breaking news, investigative reporting, and expert analysis across technology, world affairs, finance, politics, health, science, and sports. Trusted by readers in the United States and United Kingdom.">
-    <meta name="keywords" content="breaking news, world news, technology, finance, politics, health, science, sports, AI, expert analysis, investigative reporting">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="author" content="ToolsFast Editorial">
-    <meta name="geo.region" content="US">
-    <meta name="geo.placename" content="United States">
-    <meta name="language" content="English">
-    <link rel="canonical" href="https://toolsfast.online/">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="ToolsFast - Breaking News, In-Depth Analysis and Expert Reporting">
-    <meta property="og:description" content="Trusted source for breaking news, investigative journalism, and expert analysis on technology, politics, finance, and more.">
-    <meta property="og:url" content="https://toolsfast.online/">
-    <meta property="og:site_name" content="ToolsFast">
-    <meta property="og:locale" content="en_US">
-
+    <meta name="description" content="ToolsFast delivers breaking news, investigative reporting, and expert analysis across technology, world affairs, finance, politics, health, science, and sports.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 
     <style>
+        /* Logo Styling */
         .css-logo-container { display: flex; align-items: center; text-decoration: none; gap: 10px; }
-        .css-logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, #0a3d62, #3c6382); color: #ffffff; font-family: 'Inter', sans-serif; font-weight: 900; font-size: 20px; display: flex; align-items: center; justify-content: center; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .css-logo-text { font-family: 'Inter', sans-serif; font-weight: 900; font-size: 24px; color: #1e272e; letter-spacing: -0.5px; }
+        .css-logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, #0a3d62, #3c6382); color: #fff; font-weight: 900; display: flex; align-items: center; justify-content: center; border-radius: 8px; }
+        .css-logo-text { font-family: 'Inter', sans-serif; font-weight: 900; font-size: 24px; color: #1e272e; }
         .css-logo-text span { color: #3c6382; }
-        .footer-css-logo .css-logo-icon { width: 40px; height: 40px; font-size: 24px; }
-        .footer-css-logo .css-logo-text { font-size: 28px; color: #ffffff; }
-        .footer-css-logo .css-logo-text span { color: #82ccdd; }
-        
-        /* Fixed: Ensure images in cards are responsive */
-        .card-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
-    </style>
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "NewsMediaOrganization",
-        "name": "ToolsFast",
-        "url": "https://toolsfast.online",
-        "publisher": { "@type": "Organization", "name": "ToolsFast" }
-    }
-    </script>
+        /* News Card Styling */
+        .news-card { border: 1px solid #eee; border-radius: 12px; overflow: hidden; background: #fff; transition: 0.3s; height: 100%; }
+        .news-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .card-img { width: 100%; height: 200px; object-fit: cover; }
+        .card-body { padding: 15px; }
+        .card-cat { background: #3c6382; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
+        .card-title { font-size: 18px; margin: 10px 0; color: #111; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .card-meta { color: #888; font-size: 12px; }
+    </style>
 </head>
 <body>
-    <div class="breaking-bar" id="breakingBar">
-        <div class="breaking-label"><span class="breaking-dot"></span>Breaking</div>
-        <div class="breaking-content"><div class="breaking-scroll" id="breakingScroll">Fetching latest updates...</div></div>
-    </div>
-
-    <header class="site-header" id="siteHeader">
-        <div class="header-wrap">
-            <div class="header-top">
-                <div class="header-left">
-                    <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
-                    <a href="/" class="site-logo css-logo-container">
-                        <div class="css-logo-icon">T</div>
-                        <div class="css-logo-text">Tools<span>Fast</span></div>
-                    </a>
-                </div>
-                <div class="header-center"><div class="header-date" id="headerDate"></div></div>
-                <div class="header-right">
-                    <div class="search-wrapper" id="searchWrapper">
-                        <input type="text" id="searchInput" placeholder="Search news..." autocomplete="off">
-                        <button id="searchBtn" aria-label="Search"><i class="fas fa-search"></i></button>
-                    </div>
-                    <span class="live-badge"><span class="live-pulse"></span>Live</span>
-                </div>
-            </div>
-            <nav class="site-nav" id="siteNav">
-                <ul class="nav-links">
-                    <li class="active"><a href="/">Home</a></li>
-                    <li><a href="category.html?cat=world">World</a></li>
-                    <li><a href="category.html?cat=technology">Technology</a></li>
-                    <li><a href="category.html?cat=finance">Finance</a></li>
-                    <li><a href="category.html?cat=politics">Politics</a></li>
-                    <li><a href="category.html?cat=science">Science</a></li>
-                    <li><a href="category.html?cat=health">Health</a></li>
-                    <li><a href="category.html?cat=sports">Sports</a></li>
-                    <li><a href="category.html?cat=ai">AI</a></li>
-                </ul>
-            </nav>
+    <header class="site-header">
+        <div class="header-wrap" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px;">
+            <a href="/" class="css-logo-container">
+                <div class="css-logo-icon">T</div>
+                <div class="css-logo-text">Tools<span>Fast</span></div>
+            </a>
+            <div id="headerDate" style="font-size: 14px; color: #666;"></div>
         </div>
     </header>
 
     <main class="site-main">
-        <div class="main-wrap">
-            <section class="hero" id="heroSection">
-                <div class="hero-layout">
-                    <div class="hero-primary" id="heroPrimary">
-                        </div>
-                    <div class="hero-secondary" id="heroSecondary">
-                        </div>
+        <div class="main-wrap" style="max-width: 1200px; margin: auto; padding: 20px;">
+            <section class="content-section">
+                <div class="section-head" style="margin-bottom: 20px; border-bottom: 2px solid #0a3d62; padding-bottom: 10px;">
+                    <h2 style="margin: 0; color: #0a3d62;">Latest Stories</h2>
                 </div>
-            </section>
-
-            <section class="content-section" id="latestSection">
-                <div class="section-head">
-                    <h2 class="section-label">Latest Stories</h2>
-                    <a href="category.html?cat=latest" class="section-more">View All</a>
+                <div id="latestGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px;">
+                    <p style="text-align: center; grid-column: 1/-1;">Checking for new stories...</p>
                 </div>
-                <div class="card-grid four-col" id="latestGrid">
-                    <p style="padding: 20px; color: #666;">Loading latest stories...</p>
-                </div>
-            </section>
-
-            <section class="content-section" id="worldSection">
-                <div class="section-head">
-                    <h2 class="section-label">World Affairs</h2>
-                    <a href="category.html?cat=world" class="section-more">More</a>
-                </div>
-                <div class="card-grid four-col" id="worldGrid"></div>
             </section>
         </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-wrap">
-            <div class="footer-cols">
-                <div class="footer-about">
-                    <a href="/" class="css-logo-container footer-css-logo" style="margin-bottom: 20px; display: inline-flex;">
-                        <div class="css-logo-icon">T</div>
-                        <div class="css-logo-text">Tools<span>Fast</span></div>
-                    </a>
-                    <p>ToolsFast is a global news platform delivering breaking news and investigative reporting.</p>
-                </div>
-                <div class="footer-nav">
-                    <h4>Sections</h4>
-                    <ul>
-                        <li><a href="category.html?cat=world">World</a></li>
-                        <li><a href="category.html?cat=technology">Technology</a></li>
-                        <li><a href="category.html?cat=finance">Finance</a></li>
-                    </ul>
-                </div>
-                <div class="footer-nav">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms</a></li>
-                        <li><a href="sitemap.xml">Sitemap</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 ToolsFast. All rights reserved.</p>
-            </div>
-        </div>
+    <footer class="site-footer" style="background: #1e272e; color: #fff; padding: 40px 20px; margin-top: 50px; text-align: center;">
+        <p>&copy; 2026 ToolsFast. All rights reserved.</p>
     </footer>
 
-    <script src="js/config.js"></script>
-    <script src="js/main.js"></script>
-    
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Force refresh relative links after 2 seconds to fix bot errors
-            setTimeout(() => {
-                const links = document.querySelectorAll('a');
-                links.forEach(link => {
-                    if (link.href.includes('undefined') || link.href.endsWith('/#')) {
-                        link.style.display = 'none'; // Hide broken links
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update Date
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('headerDate').textContent = new Date().toLocaleDateString('en-US', options);
+
+            // Fetch News Data (Added cache buster to see updates instantly)
+            fetch('data/articles.json?t=' + new Date().getTime())
+                .then(response => response.json())
+                .then(data => {
+                    const grid = document.getElementById('latestGrid');
+                    if (!data || data.length === 0) {
+                        grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 50px;">News is being generated. Please refresh in 5 minutes.</p>';
+                        return;
                     }
+
+                    let html = '';
+                    data.forEach(article => {
+                        html += `
+                        <div class="news-card">
+                            <a href="news/${article.slug}.html" style="text-decoration:none; color:inherit;">
+                                <img src="${article.image}" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1504711434969-e33886168d7c?w=800'">
+                                <div class="card-body">
+                                    <span class="card-cat">${article.category}</span>
+                                    <h3 class="card-title">${article.title}</h3>
+                                    <div class="card-meta">
+                                        <i class="far fa-user"></i> ${article.author} | 
+                                        <i class="far fa-clock"></i> ${new Date(article.published_at).toLocaleDateString()}
+                                    </div>
+                                </div>
+                            </a>
+                        </div>`;
+                    });
+                    grid.innerHTML = html;
+                })
+                .catch(err => {
+                    console.error("Fetch error:", err);
+                    document.getElementById('latestGrid').innerHTML = '<p style="grid-column:1/-1; text-align:center;">Updates coming soon...</p>';
                 });
-            }, 2000);
         });
     </script>
 </body>
